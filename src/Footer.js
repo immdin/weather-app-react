@@ -17,7 +17,7 @@ export default function Footer() {
           </a>{" "}
           and hosted on
           <a
-            href="https://main--imaginative-crumble-ad7424.netlify.app/"
+            href="https://charming-chimera-d1f85b.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
