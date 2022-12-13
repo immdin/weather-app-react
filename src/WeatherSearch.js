@@ -10,7 +10,7 @@ import PressureIcon from "./pressure.png";
 
 export default function WeatherSearch() {
   const [city, setCity] = useState("Simferopol");
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState();
 
   function displayWeather(response) {
