@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
-import location from "../img/location-pin.svg";
-import searching from "../img/magnifying-glass.svg";
-import HumidityIcon from "../img/humidity.png";
-import WindIcon from "../img/wind.png";
-import PressureIcon from "../img/pressure.png";
+import location from "./location-pin.svg";
+import searching from "./magnifying-glass.svg";
+import HumidityIcon from "./humidity.png";
+import WindIcon from "./wind.png";
+import PressureIcon from "./pressure.png";
 
 export default function WeatherSearch() {
   const [city, setCity] = useState("Simferopol");
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(true);
   const [weather, setWeather] = useState();
 
   function displayWeather(response) {
