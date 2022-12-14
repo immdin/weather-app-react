@@ -8,7 +8,7 @@ export default function Footer() {
         <small>
           This project was coded by Medine and is open-sourced on{" "}
           <a
-            href="https://github.com/immdin/vanilla-weather-app"
+            href="https://github.com/immdin/weather-app-react"
             target="_blank"
             rel="noreferrer"
           >
