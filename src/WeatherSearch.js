@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
+//import { RotatingLines } from "react-loader-spinner";
 import location from "./location-pin.svg";
 import searching from "./magnifying-glass.svg";
 import HumidityIcon from "./humidity.png";
@@ -10,41 +12,20 @@ import PressureIcon from "./pressure.png";
 
 export default function WeatherSearch() {
   const [city, setCity] = useState("Simferopol");
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState();
+
+  const [weather, setWeather] = useState({ ready: false });
 
   function displayWeather(response) {
-    setLoaded(true);
-    let temperature = response.data.main.temp;
-    let description = response.data.weather[0].description;
-    let feels = response.data.main.feels_like;
-    let icon = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
-    let humidity = response.data.main.humidity;
-    let wind = response.data.wind.speed;
-    let pressure = response.data.main.pressure;
-    let fahrengheit = showFahrenheit();
-    let celcius = showCelcius();
-
     setWeather({
-      temperature,
-      description,
-      icon,
-      feels,
-      humidity,
-      wind,
-      pressure,
-      celcius,
-      fahrengheit,
+      ready: true,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      feels: response.data.main.feels_like,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      pressure: response.data.main.pressure,
     });
-    function showFahrenheit() {
-      setWeather({ temperature } * 1.8 + 32);
-      setWeather({ feels } * 1.8 + 32);
-    }
-
-    function showCelcius() {
-      setWeather({ temperature });
-      setWeather({ feels });
-    }
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -83,7 +64,7 @@ export default function WeatherSearch() {
     </div>
   );
 
-  if (loaded) {
+  if (weather.ready) {
     return (
       <div className="app-body">
         {form}
@@ -159,6 +140,10 @@ export default function WeatherSearch() {
       </div>
     );
   } else {
+    let APIkey = "6c67fa383e767f87b00cfc48883a902d";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
+
     return form;
   }
 }

@@ -129,17 +129,17 @@ form {
   font-weight: 600;
   font-size: 76px;
   line-height: 44px;
-  color: #565a99;
+  color: #3b408a;
 }
 
 .text {
 
   font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 25px;
+  line-height: 30px;
   text-align: center;
   color: #ffffff;
-  padding: 15px;
+  padding: 20px;
 }
 
 
@@ -149,13 +149,13 @@ form {
 }
 
 .t-text {
-  height: 14px;
+  height: 115px;
   font-weight: 700;
-  font-size: 120px;
-  line-height: 120px;
+  font-size: 95px;
+  line-height: 135px;
   text-align: center;
   color: #ffffff;
-  margin-top: 39px;
+
 }
 
 .parametres-container {
