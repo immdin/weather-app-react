@@ -3,6 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
+import FormattedDate from "./FormattedDate";
 //import { RotatingLines } from "react-loader-spinner";
 import location from "./location-pin.svg";
 import searching from "./magnifying-glass.svg";
@@ -19,6 +20,7 @@ export default function WeatherSearch() {
     setWeather({
       ready: true,
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       feels: response.data.main.feels_like,
@@ -75,7 +77,9 @@ export default function WeatherSearch() {
           </h1>
           <br />
           <p className="text">
-            <small id="data">Thursday 12:07</small>
+            <small id="data">
+              <FormattedDate date={weather.date} />
+            </small>
             <br />
             <small className="description" id="data ">
               {weather.description}
