@@ -3,9 +3,10 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
 import FormattedDate from "./FormattedDate";
-import HumidityIcon from "./humidity.png";
-import WindIcon from "./wind.png";
-import PressureIcon from "./pressure.png";
+import HumidityIcon from "./icons/humidity.svg";
+import WindIcon from "./icons/wind.svg";
+import PressureIcon from "./icons/barometer.svg";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -53,12 +54,9 @@ export default function WeatherInfo(props) {
           Feels like {Math.round(props.data.feels)}°
         </p>
 
-        <img
-          className="clearfix img-fluid text-center "
-          src={props.data.icon}
-          alt={props.data.description}
-          id="icon"
-        />
+        <div className="clearfix text-center ">
+          <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        </div>
 
         <ul className="row parametres-container">
           <li className="col">
