@@ -6,6 +6,8 @@ import FormattedDate from "./FormattedDate";
 import HumidityIcon from "./icons/humidity.svg";
 import WindIcon from "./icons/wind.svg";
 import PressureIcon from "./icons/barometer.svg";
+
+import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
@@ -27,31 +29,10 @@ export default function WeatherInfo(props) {
       </p>
 
       <div className=" temperature">
-        <p className="t-text">
-          <span id="temperature">{Math.round(props.data.temperature)}° </span>
-
-          <a
-            href="/"
-            onChange={props.data.celcius}
-            className="celcius active comm"
-          >
-            C
-          </a>
-          <span className="divisor comm"> | </span>
-          <a
-            href="/"
-            onChange={props.data.fahrengheit}
-            className="farengheit comm"
-          >
-            F
-          </a>
-        </p>
-        <p
-          className="text feels"
-          onClick={(props.data.celcius, props.data.fahrengheit)}
-        >
-          Feels like {Math.round(props.data.feels)}°
-        </p>
+        <WeatherTemperature
+          celsius={props.data.temperature}
+          feel={props.data.feels}
+        />
       </div>
       <div className="WeatherIcon ">
         <span className="clearfix text-center ">

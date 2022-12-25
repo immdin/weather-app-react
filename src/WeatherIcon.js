@@ -1,5 +1,6 @@
 import React from "react";
 
+//All weather icons i have take from https://bas.dev/work/meteocons
 import ClearDay from "./icons/clear-day.svg";
 import ClearNight from "./icons/clear-night.svg";
 import PartlyCloudyDay from "./icons/partly-cloudy-day.svg";

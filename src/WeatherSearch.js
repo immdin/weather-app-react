@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
+import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 
 import "./App.css";
 import WeatherInfo from "./WeatherInfo";
-
-import location from "./location-pin.svg";
-import searching from "./magnifying-glass.svg";
 
 export default function WeatherSearch(props) {
   const [city, setCity] = useState(props.city);
@@ -54,10 +52,15 @@ export default function WeatherSearch(props) {
           autoComplete="off"
         />
         <button className="search" id="search-btn" type="submit" value="Search">
-          <img className="icon" src={searching} alt="magnifying glass" />
+          <span id="icon">
+            <FaSearch />
+          </span>
         </button>
         <button className="local" type="submit">
-          <img className="icon" src={location} alt="location pin" />
+          <span id="icon">
+            {" "}
+            <FaMapMarkerAlt />
+          </span>
         </button>
       </form>
     </div>
