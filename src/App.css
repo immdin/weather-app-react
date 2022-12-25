@@ -99,9 +99,19 @@ form {
   transition: all 300ms ease-in-out;
 }
 
-.icon {
-  width: 55%;
+.WeatherIcon{
+  height: 150px;
 }
+
+.icon {
+width: 40%;
+margin: 0 auto;
+display: block;
+position: relative;
+bottom: 55px;
+}
+
+
 
 .fa-location-dot:hover {
   color: rgba(0, 0, 0, 0.3);

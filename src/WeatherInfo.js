@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
         </small>
       </p>
 
-      <span className=" temperature">
+      <div className=" temperature">
         <p className="t-text">
           <span id="temperature">{Math.round(props.data.temperature)}° </span>
 
@@ -46,19 +46,20 @@ export default function WeatherInfo(props) {
             F
           </a>
         </p>
-
         <p
           className="text feels"
           onClick={(props.data.celcius, props.data.fahrengheit)}
         >
           Feels like {Math.round(props.data.feels)}°
         </p>
-
-        <div className="clearfix text-center ">
+      </div>
+      <div className="WeatherIcon ">
+        <span className="clearfix text-center ">
           <WeatherIcon code={props.data.icon} alt={props.data.description} />
-        </div>
-
-        <ul className="row parametres-container">
+        </span>
+      </div>
+      <div className="parametres-container">
+        <ul className="row ">
           <li className="col">
             <img src={HumidityIcon} id="parametres-icon" alt="humidityicon" />
             <small className="text humidity">{props.data.humidity}% </small>
@@ -72,7 +73,7 @@ export default function WeatherInfo(props) {
             <small className="text pressure"> {props.data.pressure}mmHg</small>
           </li>
         </ul>
-      </span>
+      </div>
     </div>
   );
 }
