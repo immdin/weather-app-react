@@ -70,14 +70,16 @@ export default function WeatherSearch(props) {
 
   if (weather.ready) {
     return (
-      <div className="app-body container">
+      <div className="app-body ">
         {form}
-        <div className="row">
-          <div className="col">
-            <WeatherInfo data={weather} />
-          </div>
-          <div className="col">
-            <WeatherForecast data={weather} />
+        <div className="container d-flex  justify-content-center">
+          <div className="row">
+            <div className="col  ">
+              <WeatherInfo data={weather} />
+            </div>
+            <div className="col ">
+              <WeatherForecast data={weather} />
+            </div>
           </div>
         </div>
       </div>
