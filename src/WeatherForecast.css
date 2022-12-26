@@ -1,0 +1,66 @@
+.WeatherForecast{
+ width: 280px;
+height: 535px;
+padding-bottom: 5px;
+padding-top: 37px;
+background: rgb(255 255 255 / 20%);
+border-radius: 25px;
+
+margin: 30px 0px 0 5px;
+}
+
+
+.weather-forecast {
+  font-size: 20px;
+  font-weight: 200;
+  border: none;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 8%;
+  padding-top: 3%;
+  flex-grow: 1;
+  width: 1150px;
+}
+
+.weekDay {
+font-size: 25px;
+  font-weight: bolder;
+  color:white;
+}
+.forecastDate{
+    color: #565a99;
+    text-align: center;
+}
+
+.forecast_date:hover{
+color: rgba(95, 95, 95, 0.6);
+  transition: all 150ms ease-in-out;
+}
+
+.forecast-temperatures{
+    margin: 2px;
+}
+
+.temp-max,
+.temp-min {
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  
+}
+
+.temp-min {
+  opacity: 0.5;
+}
+
+
+
+.icon-f {
+width: 50%;
+
+display: block;
+
+}
+

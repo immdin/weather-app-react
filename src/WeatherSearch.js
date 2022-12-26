@@ -5,6 +5,7 @@ import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 
 import "./App.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherSearch(props) {
   const [city, setCity] = useState(props.city);
@@ -13,6 +14,7 @@ export default function WeatherSearch(props) {
   function displayWeather(response) {
     setWeather({
       ready: true,
+
       city: response.data.name,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
@@ -68,9 +70,16 @@ export default function WeatherSearch(props) {
 
   if (weather.ready) {
     return (
-      <div className="app-body">
+      <div className="app-body container">
         {form}
-        <WeatherInfo data={weather} />
+        <div className="row">
+          <div className="col">
+            <WeatherInfo data={weather} />
+          </div>
+          <div className="col">
+            <WeatherForecast data={weather} />
+          </div>
+        </div>
       </div>
     );
   } else {

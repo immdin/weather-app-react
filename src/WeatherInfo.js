@@ -35,7 +35,7 @@ export default function WeatherInfo(props) {
         />
       </div>
       <div className="WeatherIcon ">
-        <span className="clearfix text-center ">
+        <span className="clearfix text-center icon ">
           <WeatherIcon code={props.data.icon} alt={props.data.description} />
         </span>
       </div>
