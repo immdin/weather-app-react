@@ -2,7 +2,7 @@
 
 .WeatherForecast{
  width: 350px;
-height: 534px;
+height: auto;
 padding-bottom: 5px;
 padding-top: 37px;
 background: rgb(255 255 255 / 20%);

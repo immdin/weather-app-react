@@ -2,11 +2,9 @@
   display: flex;
   background-image: linear-gradient(315deg, #b8c6db 0%, #5d5fef 74%);
   background-attachment: fixed;
-
- 
   flex-direction: column;
   text-transform: capitalize;
-  padding: 20px;
+  padding: 15px;
 }
 
 
@@ -89,12 +87,10 @@ form {
   padding: 0 6px 0 0;
   
 }
-
-
-.WeatherIcon{
-  height: 150px;
+.img-fluid {
+  margin-top: -9px;
+  margin-bottom: -32%;
 }
-
 .icon {
 width: 35%;
 margin: 0 auto;
@@ -107,6 +103,7 @@ bottom: 35px;
   transform: scale(1.7);
   margin: 0 auto;
   display: block;
+  
 }
 
 
@@ -144,7 +141,11 @@ font-size: 18px;
 line-height: 10px;
 text-align: center;
 color: #565a99;
-padding: 10px;
+}
+
+.feels{
+  margin:25px;
+
 }
 
 
@@ -160,6 +161,7 @@ padding: 10px;
   line-height: 100px;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 5px;
 
 }
 

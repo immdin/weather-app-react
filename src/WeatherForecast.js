@@ -6,7 +6,7 @@ import WeatherIcon from "./WeatherIcon";
 export default function WeatherForecast(props) {
   return (
     <div className="container WeatherForecast">
-      <div className="row">
+      <div className="row g-2">
         <div className="col col-md-4">
           <div className="weekDay">Thursday</div>
           <div className="forecastDate">26.12.22</div>
