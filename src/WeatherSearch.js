@@ -14,7 +14,7 @@ export default function WeatherSearch(props) {
   function displayWeather(response) {
     setWeather({
       ready: true,
-
+      coordinates: response.data.coord,
       city: response.data.name,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
@@ -78,7 +78,7 @@ export default function WeatherSearch(props) {
               <WeatherInfo data={weather} />
             </div>
             <div className="col ">
-              <WeatherForecast data={weather} />
+              <WeatherForecast coordinates={weather.coordinates} />
             </div>
           </div>
         </div>
