@@ -1,33 +1,23 @@
 
 
 .WeatherForecast{
- width: 350px;
-height: auto;
-padding-bottom: 5px;
-padding-top: 37px;
+width: 350px;
+height: 85px;
+margin-bottom: -15px;
+padding-top: 12px;
 background: rgb(255 255 255 / 20%);
 border-radius: 25px;
 margin-top: 30px;
 }
 
 
-.weather-forecast {
-  font-size: 20px;
-  font-weight: 200;
-  border: none;
-  color: white;
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 8%;
-  padding-top: 3%;
-  flex-grow: 1;
-  width: 1150px;
-}
 
 .weekDay {
-font-size: 25px;
-  font-weight: bolder;
-  color:white;
+font-size: 20px;
+font-weight: bolder;
+color: white;
+padding-top: 15px;
+text-align: center;
 }
 .forecastDate{
     color: white;
@@ -64,11 +54,11 @@ color: rgba(95, 95, 95, 0.6);
 
 
 .icon-f {
-width: 150%;
+width: 85%;
 display: block;
 position: relative;
-bottom: 37px;
-right: 34px;
+bottom: 6px;
+right: 3px;
 
 }
 
