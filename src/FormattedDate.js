@@ -12,17 +12,18 @@ export default function FormattedDate(props) {
   ];
 
   let day = days[props.date.getDay()];
-  let hours = props.date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = props.date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let localTime = props.date.getTime();
+  
+  let localOffset = props.date.getTimezoneOffset() * 60000;
+  let currentUtcTime = localOffset + localTime;
+  let cityOffset = currentUtcTime ;
+  let cityTime = new Date(cityOffset).toTimeString().split(' ');
+  let time = cityTime[0] 
+
+  
   return (
     <div>
-      {day} {hours}:{minutes}
+      {day} {time}
     </div>
   );
 }
