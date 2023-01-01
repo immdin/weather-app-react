@@ -17,17 +17,16 @@ export default function WeatherTemperature(props) {
     return (
       <div className="WeatherTemperature">
         <p className="t-text">
-          <span id="temperature">{Math.round(props.celsius)}° </span>
-
-          <a href="/" className="celcius active comm">
+          <span id="temperature">{Math.round(props.celsius)}° <a href="/" className="celcius active comm">
             C
           </a>
           <span className="divisor comm"> | </span>
           <a href="/" onClick={convertToFahrenheit} className="farengheit comm">
             F
-          </a>
+            </a>
+            </span>
         </p>
-        <p className="text feels">Feels like {Math.round(props.feel)}°</p>
+        <p className="text feels">Feels like {Math.round(props.feel)}°C</p>
       </div>
     );
   } else {
@@ -46,7 +45,7 @@ export default function WeatherTemperature(props) {
             F
           </a>
         </p>
-        <p className="text feels">Feels like {Math.round(feel_like)}°</p>
+        <p className="text feels">Feels like {Math.round(feel_like)}°F</p>
       </div>
     );
   }
